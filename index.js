@@ -25,10 +25,6 @@ function parseIdade(){
     return people.map(person => ({name: person.name, age: parseInt(person.age)}));
 }
 
-function médiaIdade(){
-    return people.reduce((acc, person) => acc + person.age, 0)/people.length;
-}
-
 function removeDaLista(person){
     let index = people.findIndex(p => p.name === person.name && p.age === person.age);
     people.splice(index, 1);
